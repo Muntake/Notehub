@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    </div>
+
+    <div class="main">
+
+        <div class="headerTitle">
+            <h2 id="title">Welcome to NoteHub</h2>
+            <img id="pencil" src="pencil.png" />
+        </div>
+
+        <div class="form">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+                <button type="button" class="toggle-btn" onclick="register()">Register</button>
+            </div>
+            <br>
+            <br>
+
+            <form action="login.php" id="login" class="input-group" method="post">
+                <input type="text" name="user_id" id="user_id" class="input-field" placeholder="User ID" required>
+                <input type="text" name="password" id="password" class="input-field" placeholder="Enter Password"
+                    required>
+                <input type="submit" name="login" value="login" class="submit-btm loginButton">
+            </form>
+            <form action="register.php" id="register" class="input-group" method="post">
+                <input type="text" name="user_idr" id="user_idr" class="input-field" placeholder="User ID" required>
+
+                <input type="text" name="passwordr" id ="passwordr" class="input-field" placeholder="Enter Password" required>
+                <input type="submit" class="submit-btm registerButton" value="Register">
+            </form>
+        </div>
+    </div>
+    <script>
+        var x = document.getElementById("login")
+        var y = document.getElementById("register")
+        var z = document.getElementById("btn")
+
+        function register() {
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "109px"
+        }
+        function login() {
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0px"
+        }
+    </script>
+</body>
+
+</html>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .headerTitle {
+        height: 100px;
+        display: flex;
+        margin-top: 30px;
+        justify-content: center;
+        
+    }
+
+    #title {
+        color: white;
+        font-size: 50;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .loginButton {
+        margin-top: 125px;
+    }
+
+    .registerButton {
+        margin-top: 75px;
+    }
+</style>

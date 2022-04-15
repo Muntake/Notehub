@@ -1,0 +1,17 @@
+CREATE DATABASE noteHub;
+
+CREATE TABLE users(
+	Username varchar(25),
+	User_ID int,
+	Password varchar(25),
+	PRIMARY KEY (User_ID)
+);
+
+CREATE TABLE notes(
+	Note_id SERIAL,
+	Title varchar(25),
+	Body BLOB,
+	User_ID int,
+	FOREIGN KEY (User_ID) REFERENCES users (User_ID),
+	PRIMARY KEY (Note_ID)
+);
